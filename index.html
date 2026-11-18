@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sindhuja M — Portfolio</title>
+<style>
+:root{--bg:#f6f8fb;--panel:#fff;--ink:#0f172a;--mute:#5b677a;--line:#e2e8f0;--acc:#0d9488;--accsoft:#d9f3ef;--hot:#e11d48;--band:#0f172a;--bandink:#f1f5f9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--panel:#121b2e;--ink:#e5ecf6;--mute:#9aa8bd;--line:#223049;--acc:#2dd4bf;--accsoft:#12332f;--hot:#fb7185;--band:#0f1a2e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1220;--panel:#121b2e;--ink:#e5ecf6;--mute:#9aa8bd;--line:#223049;--acc:#2dd4bf;--accsoft:#12332f;--hot:#fb7185;--band:#0f1a2e;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;font-size:1.05rem}
+nav a{color:var(--mute);font-size:.95rem;font-weight:500}
+h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.015em}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;padding:72px 0 64px}
+.role{color:var(--acc);font-weight:600;margin-bottom:10px}
+h1{font-size:clamp(2.6rem,7vw,4.4rem);font-weight:800}
+.pitch{font-size:1.15rem;color:var(--mute);margin:18px 0 28px;max-width:32em}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);font-weight:600;font-size:.95rem}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#04201c}
+.btn:hover{text-decoration:none;border-color:var(--acc)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+.stat b{display:block;font-size:2rem;font-weight:800;line-height:1.1}
+.stat span{color:var(--mute);font-size:.9rem}
+section{padding:60px 0}
+.head{margin-bottom:28px}
+.head h2{font-size:2rem;font-weight:800}
+.head p{margin:6px 0 0;color:var(--mute)}
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;margin-bottom:22px}
+.feature h3{font-size:1.5rem;font-weight:800}
+.feature p{color:var(--mute)}
+.tag{display:inline-block;background:var(--accsoft);color:var(--acc);font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:99px;margin:0 6px 6px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column}
+.card h3{font-size:1.2rem;font-weight:700}
+.card p{color:var(--mute);margin:8px 0 14px}
+.card .tags{margin-top:auto;margin-bottom:12px}
+.demo{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px}
+.demo b.t{display:block;margin-bottom:12px}
+.slots{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-bottom:14px}
+.slot{height:44px;border:1.5px solid var(--line);border-radius:6px}
+.slot.busy{background:var(--acc);border-color:var(--acc)}
+.dstats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.dstats b{display:block;font-size:1.3rem;font-weight:800}
+.dstats span{font-size:.75rem;color:var(--mute);line-height:1.2;display:block}
+#blk.hit{color:var(--hot)}
+label{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600}
+input[type=range]{width:100%;accent-color:var(--acc);margin:6px 0 10px}
+button.s{font:inherit;font-weight:600;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:8px;padding:6px 14px;cursor:pointer}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.skills h3{font-size:1rem;margin-bottom:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.two .card p{margin:6px 0 0}
+.band{background:var(--band);color:var(--bandink);padding:56px 0;text-align:center}
+.band h2{font-size:2rem;font-weight:800}
+.band p{color:#b6c2d4;margin:10px auto 22px;max-width:30em}
+.band .btn{background:var(--acc);border-color:var(--acc);color:#04201c}
+footer{padding:24px 0 40px;text-align:center;color:var(--mute);font-size:.9rem}
+.tbtn{background:transparent;border:1.5px solid var(--line);color:var(--ink);border-radius:99px;width:38px;height:38px;cursor:pointer;font-size:1.05rem;line-height:1;flex:none}
+.tbtn:hover{border-color:var(--acc)}
+.net{width:100%;height:auto;display:block}
+.net .lk{stroke:var(--line);stroke-width:2}
+.net .fl{stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-dasharray:6 22;animation:flow 1.6s linear infinite}
+.net .nd{fill:var(--panel);stroke:var(--acc);stroke-width:2.5}
+.net .pu{fill:var(--acc);opacity:.25;transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
+@keyframes flow{to{stroke-dashoffset:-28}}
+@keyframes pulse{0%{transform:scale(.6);opacity:.5}100%{transform:scale(2.4);opacity:0}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero>div:first-child>*{animation:up .7s cubic-bezier(.2,.7,.2,1) both}
+.hero>div:first-child>*:nth-child(2){animation-delay:.1s}
+.hero>div:first-child>*:nth-child(3){animation-delay:.2s}
+.hero>div:first-child>*:nth-child(4){animation-delay:.3s}
+.js .rev{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .4s ease,border-color .25s ease,box-shadow .25s ease}
+.js .rev.in{opacity:1;transform:none}
+.card:hover{border-color:var(--acc)}
+.js .rev.in.card:hover{transform:translateY(-5px);border-color:var(--acc);box-shadow:0 12px 26px rgba(15,23,42,.12)}
+.btn{transition:transform .2s ease,border-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rev{opacity:1;transform:none}}
+@media (max-width:800px){.hero,.feature,.two{grid-template-columns:1fr}.hero{padding-top:44px}.net{max-width:340px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Sindhuja M</b><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a><button class="tbtn" id="theme" type="button" aria-label="Switch between dark and light theme">☾</button></div></nav>
+<div class="wrap">
+<header class="hero">
+  <div>
+    <div class="role">Java and Python developer</div>
+    <h1>Sindhuja M</h1>
+    <p class="pitch">Third-year AI &amp; Data Science student in Chennai. I build reliable software, from thread-safe network simulators to health-triage tools for rural clinics, and I’m looking for an internship.</p>
+    <div class="btns">
+      <a class="btn p" href="#projects">View projects</a>
+      <a class="btn" href="https://github.com/Sindhuja-M-309">GitHub</a>
+      <a class="btn" href="https://linkedin.com/in/sindhuja--m">LinkedIn</a>
+    </div>
+  </div>
+  <svg class="net" viewBox="0 0 360 300" aria-hidden="true">
+    <line class="lk" x1="40" y1="60" x2="130" y2="150"/><line class="lk" x1="40" y1="240" x2="130" y2="150"/><line class="lk" x1="130" y1="150" x2="230" y2="150"/><line class="lk" x1="230" y1="150" x2="320" y2="60"/><line class="lk" x1="230" y1="150" x2="320" y2="240"/>
+    <line class="fl" x1="40" y1="60" x2="130" y2="150"/><line class="fl" style="animation-delay:-.5s" x1="130" y1="150" x2="230" y2="150"/><line class="fl" style="animation-delay:-1s" x1="230" y1="150" x2="320" y2="240"/><line class="fl" style="animation-delay:-.8s" x1="40" y1="240" x2="130" y2="150"/>
+    <circle class="pu" cx="130" cy="150" r="14"/><circle class="pu" style="animation-delay:-1.2s" cx="230" cy="150" r="14"/>
+    <circle class="nd" cx="40" cy="60" r="10"/><circle class="nd" cx="40" cy="240" r="10"/><circle class="nd" cx="320" cy="60" r="10"/><circle class="nd" cx="320" cy="240" r="10"/>
+    <circle class="nd" cx="130" cy="150" r="15"/><circle class="nd" cx="230" cy="150" r="15"/>
+  </svg>
+</header>
+
+<section id="projects" style="padding-top:20px">
+  <div class="head"><h2>Projects</h2><p>Selected work, with code on GitHub.</p></div>
+  <div class="feature">
+    <div>
+      <h3>Circuit Switching Simulator</h3>
+      <p>A Java 17 Swing app that reserves matching time slots across multi-hop paths, rolls back partial reservations when a call fails, and checks its measured blocking against the Erlang-B formula. Locks, a concurrent map and futures keep simultaneous callers safe.</p>
+      <div><span class="tag">Java</span><span class="tag">Multithreading</span><span class="tag">ReentrantLock</span><span class="tag">CompletableFuture</span><span class="tag">BFS</span></div>
+      <p><a href="https://github.com/Sindhuja-M-309/Circuit-Switching-Simulator">View the code</a></p>
+    </div>
+    <div class="demo" aria-label="Live call blocking demo">
+      <b class="t">Try it: eight lines, random calls</b>
+      <div class="slots" id="slots"></div>
+      <label for="load"><span>Offered load</span><span id="loadv">5 Erlangs</span></label>
+      <input id="load" type="range" min="1" max="14" step="0.5" value="5">
+      <div class="dstats">
+        <div><b id="tot">0</b><span>calls</span></div>
+        <div><b id="blk">0</b><span>blocked</span></div>
+        <div><b id="obs">–</b><span>observed</span></div>
+        <div><b id="thy">–</b><span>Erlang-B</span></div>
+      </div>
+      <button class="s" id="pp" type="button">Pause</button>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>ASHA-Pulse AI</h3>
+      <p>Turns spoken Tamil into clinical English with an LLM, scores triage risk red, yellow or green, and shares referrals by offline QR code or short SMS.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">LLM APIs</span></div>
+      <a href="https://github.com/Sindhuja-M-309/Voice-based-Rural-Health-Referral-System">View the code</a></div>
+    <div class="card"><h3>SupplyPulse AI</h3>
+      <p>A phone-based prototype that listens to produce taps and inspects photos to estimate spoilage risk, then reroutes the truck and lists the load for nearby processors.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">OpenCV</span><span class="tag">SQLite</span></div>
+      <a href="https://github.com/Sindhuja-M-309/SupplyPulse-AI">View the code</a></div>
+    <div class="card"><h3>Hand Gesture Control</h3>
+      <p>Controls play, pause and volume from a webcam with a 6-class CNN: about 97.7% validation accuracy and 18ms per frame on my own dataset.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">CNN</span><span class="tag">OpenCV</span></div>
+      <a href="https://github.com/Sindhuja-M-309/Hand-gesture-control-CNN">View the code</a></div>
+    <div class="card"><h3>Log Analyzer</h3>
+      <p>A Java streaming engine that parses and aggregates transaction logs into a file ledger and MySQL, handling 170K+ records in under 250ms.</p>
+      <div class="tags"><span class="tag">Java</span><span class="tag">JDBC</span><span class="tag">MySQL</span></div>
+      <a href="https://github.com/Sindhuja-M-309/Intelligent-log-analyzer">View the code</a></div>
+    <div class="card"><h3>E-Commerce Recommender</h3>
+      <p>Turns view, cart and purchase events in MySQL into ratings, recommends with collaborative filtering, and falls back to trending items for new users.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">scikit-learn</span></div>
+      <a href="https://github.com/Sindhuja-M-309/Predictive-Ecommerce-Recommendation-Engine">View the code</a></div>
+  </div>
+</section>
+
+<section id="skills" style="padding-top:20px">
+  <div class="head"><h2>Skills</h2></div>
+  <div class="skills">
+    <div><h3>Languages</h3><span class="tag">Java</span><span class="tag">Python</span><span class="tag">C</span><span class="tag">JavaScript</span></div>
+    <div><h3>Java in depth</h3><span class="tag">OOP</span><span class="tag">Collections</span><span class="tag">Multithreading</span><span class="tag">JDBC</span></div>
+    <div><h3>Web</h3><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">HTML and CSS</span><span class="tag">REST APIs</span><span class="tag">Flask</span></div>
+    <div><h3>Data and AI</h3><span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">scikit-learn</span><span class="tag">pandas</span><span class="tag">Tableau</span></div>
+    <div><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Linux</span></div>
+  </div>
+</section>
+
+<section id="education" style="padding-top:20px">
+  <div class="head"><h2>Education and credentials</h2></div>
+  <div class="two">
+    <div class="card"><h3>B.Tech, AI &amp; Data Science</h3><p>Rajalakshmi Institute of Technology, Chennai. 2024 to 2028. CGPA 8.1 through the 4th semester.</p></div>
+    <div class="card"><h3>Certificates and experience</h3><p>NPTEL Elite in Software Engineering and in Data Analytics with Python. UiPath Automation Developer Associate. AI Skills Passport by EY and Microsoft. Tableau analytics internship with 1M1B.</p></div>
+  </div>
+</section>
+</div>
+
+<div class="band" id="contact"><div class="wrap">
+  <h2>Let’s work together</h2>
+  <p>I’m open to internships. Email is the quickest way to reach me.</p>
+  <a class="btn" href="mailto:sindhujamurugan108@gmail.com">sindhujamurugan108@gmail.com</a>
+</div></div>
+<footer>Sindhuja M, Chennai, Tamil Nadu</footer>
+<script>
+(function(){
+var M=8,HOLD=2.5,E=5,ends=[],tot=0,blk=0,next=0,last=0,run=true,flash=0;
+var sl=document.getElementById('slots'),cells=[];
+for(var i=0;i<M;i++){ends.push(0);var d=document.createElement('div');d.className='slot';sl.appendChild(d);cells.push(d);}
+var $=function(id){return document.getElementById(id)};
+function expo(m){return -m*Math.log(1-Math.random())}
+function erlang(e,m){var inv=1;for(var i=1;i<=m;i++){inv=1+inv*(i/e)}return 1/inv}
+function reset(){tot=0;blk=0;var t=performance.now()/1000;next=t+expo(HOLD/E);for(var i=0;i<M;i++)ends[i]=0}
+function tick(){
+  var t=performance.now()/1000;
+  if(run){
+    if(t-last>1){next=t+expo(HOLD/E)}
+    while(t>=next){
+      tot++;var f=-1;
+      for(var i=0;i<M;i++){if(ends[i]<=t){f=i;break}}
+      if(f>=0){ends[f]=t+expo(HOLD)}else{blk++;flash=t+0.25}
+      next+=expo(HOLD/E);
+    }
+  }
+  last=t;
+  for(var j=0;j<M;j++){cells[j].className='slot'+(ends[j]>t?' busy':'')}
+  $('tot').textContent=tot;$('blk').textContent=blk;
+  $('blk').className=t<flash?'hit':'';
+  $('obs').textContent=tot>=20?(100*blk/tot).toFixed(1)+'%':'–';
+  $('thy').textContent=(100*erlang(E,M)).toFixed(1)+'%';
+  requestAnimationFrame(tick);
+}
+$('load').addEventListener('input',function(){E=parseFloat(this.value);$('loadv').textContent=E+' Erlangs';reset()});
+$('pp').addEventListener('click',function(){run=!run;this.textContent=run?'Pause':'Start';if(run){reset()}});
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){run=false;$('pp').textContent='Start'}
+reset();tick();
+var root=document.documentElement;
+function dark(){var a=root.getAttribute('data-theme');return a?a==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+function icon(){$('theme').textContent=dark()?'☀':'☾'}
+try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
+icon();
+$('theme').addEventListener('click',function(){var n=dark()?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}icon()});
+if('IntersectionObserver' in window){
+  root.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.head,.feature,.card,.skills>div,.band .wrap').forEach(function(e){e.classList.add('rev');io.observe(e)});
+}
+})();
+</script>
+</body>
+</html>
